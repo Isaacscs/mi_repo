@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 16px; 
 }
 
 :root {
@@ -11,7 +11,7 @@
     --row_increment: 0.625rem;
     /*~10px Al estar usando CSS grid, cada tarjeta/pin estará hecha con incrementos de 10px para las filas */
     --card_border_radius: 1rem;
-    /*~16px  Redondeo en los bordes de las tarjetas/pines*/
+    /*~16px  Redondeo en    q12<los bordes de las tarjetas/pines*/
     --card_small: 26;
     /* Factor de crecimiento para tarjetas pequeñas: 26*0.625rem */
     --card_medium: 33;
@@ -26,10 +26,152 @@ main {
     background-color: blanchedalmond;
 }
 
+nav{
+    height: 5rem;
+    background-color: brown;
+    display: flex;
+}
+
+.navbar_pinterest_buttons_container {
+    width: 16rem;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-inline-start: 0.5rem;
+}
+
+.navbar_input_search_container {
+    flex-grow: 4;
+    min-width: 3rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+} 
+.navbar_input_search {
+    padding-inline-start: 0.6rem;
+    height: 3rem;
+    width: 100%;
+    background-color: gray;
+    border-radius: 1.5rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar_input_search>svg {
+    height: 1rem;
+    flex-wrap: wrap;
+}
+
+svg {display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0.6rem;
+    padding-top: 0.3rem;
+
+}
+
+.navbar_input_search>input {
+    height: 2rem;
+    flex-grow: 3;
+    margin-inline-end: 1rem;
+    margin-inline-start: 0.8rem;
+    background-color: transparent;
+    border-style: none;
+}
+   
+.navbar_input_search>input:focus-visible{
+    outline: none;
+}
+
+.navbar_user_buttons_container {
+    width: 13rem;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+#notifications{
+    background-color: rgb(253,253, 253);
+    color: rgb (163,163,163);
+    border: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+#notifications:hover{
+    background-color: rgb(190,190, 190);
+}
+#notifications:focus{
+    color: rgb(2, 2, 2)
+}
+
+#message{
+    background-color: rgb(253,253, 253);
+    border: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+#message:hover{
+    background-color:rgb(190,190, 190) ;
+}
+
+
+#inicio{
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 50%;
+}
+
+#inicio:focus{
+    color:white;
+    background-color: black;
+}
+
+
+#profile-img{
+    background-color: rgb(253,253, 253);
+    color: rgb(163,163,163);
+    border: 0;
+    border-radius: 50%;
+}
+
+#profile-img:hover{
+    background-color: rgb(190,190, 190);
+    width: 4rem;
+    height: 4rem;
+
+}
+
+#dropdown_user{
+    background-color: #FFFFFF;
+    border: 0;
+    width: 5rem;
+    height: 5rem;
+    outline: none;
+}
+.bi-pinterest{
+    color: #e60023;
+}
+#pinterest-icon:hover{
+    background-color: rgb(190,190, 190);
+
+}
+
+
 .pin_container {
     margin: 0;
     padding: 0;
-    width: 80%;
+    width: 100%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -43,10 +185,61 @@ main {
 }
 
 .card {
+    position: relative;
     padding: 0;
     margin: 15px 10px;
     border-radius: var(--card_border_radius);
     background-color: red;
+}
+.card_content {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5rem;
+    position: absolute;
+    text-align: center;
+    background-color: crimson;
+    border-radius: var(--card_border_radius);
+}
+.card_buttons_on_hover {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: var(--card_border_radius);
+}
+
+.card_buttons_on_hover:hover{
+    opacity: 1;
+}
+.boton_guardar {
+    background-color: #e60023;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    
 }
 
 .card_small {
