@@ -20,8 +20,8 @@
     /* Factor de crecimiento para tarjetas grandes: 26*0.625rem */
 }
 
-main {
-    height: 100vh;
+#content {
+    height: 100%;
     width: 100%;
     background-color: blanchedalmond;
 }
@@ -181,7 +181,7 @@ svg {display: flex;
     grid-auto-rows: var(--row_increment);
     justify-content: center;
 
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .card {
@@ -189,28 +189,26 @@ svg {display: flex;
     padding: 0;
     margin: 15px 10px;
     border-radius: var(--card_border_radius);
-    background-color: red;
+    background-color: rgb(255, 255, 255);
 }
-.card_content {
+.card-image {
     width: 100%;
     height: 100%;
-    padding-top: 0.5rem;
     position: absolute;
     text-align: center;
-    background-color: crimson;
+    background-color: rgb(255, 255, 255);
     border-radius: var(--card_border_radius);
 }
 .card_buttons_on_hover {
     width: 100%;
     height: 100%;
-    padding-top: 0.5rem;
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
+    justify-content: space-between;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.493);
     color: white;
@@ -222,24 +220,21 @@ svg {display: flex;
     opacity: 1;
 }
 .boton_guardar {
-    background-color: #e60023;
-    border-radius: 999px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    opacity: 1;
-    outline: 0 solid transparent;
-    padding: 8px 18px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: fit-content;
-    word-break: break-word;
+    min-width: 6rem;
+    margin-left: 125px;
+    margin-top: 0.5rem;
+    height: 2.5rem;
+    color: #ffffff;
     border: 0;
+    border-radius: 62.43rem;
+    background: red;
+    font-size: 16px;
+    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto;
+    font-weight: bold;
     
+}
+.boton_guardar:hover{
+    opacity: 1;
 }
 
 .card_small {
@@ -252,4 +247,94 @@ svg {display: flex;
 
 .card_large {
     grid-row-end: span var(--card_large);
+}
+
+img{
+object-fit: cover;
+width: 100%;
+height: 100%;
+border-radius: var(--card_border_radius);
+}
+
+.tarjeta_arriba{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-top: 0.5rem;
+}
+
+.tarjeta_abajo{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+#actualizar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-top: 50%;
+    margin-left: 50%;
+}
+
+#actualizar:hover{
+    background-color: white;
+}
+
+#trespuntos{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-top: 50%;
+    margin-right: 0.3rem;
+}
+#trespuntos:hover{
+    background-color: white;
+
+}
+#actualizarM{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-top: 85%;
+    margin-left: 50%;
+}
+
+#actualizarM:hover{
+    background-color: white;
+}
+
+#trespuntosM{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+}
+#trespuntosM:hover{
+    background-color: white;
+
+}
+
+#actualizarL{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-top: 130%;
+    margin-left: 50%;
+}
+
+#actualizarL:hover{
+    background-color: white;
+}
+
+#trespuntosL{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-top: 130%;
+    margin-right: 0.3rem;
+}
+#trespuntosL:hover{
+    background-color: white;
+
 }
